@@ -9,7 +9,7 @@
     <script src="app.js" defer></script>
   </head>
   <body>
-    <!-- ----------------------- box-shadow: var(--ebs) ------------------------ -->
+    <!-- ----------------------- box-shadow: var(--DTBoxShadow) ------------------------ -->
     <div id="INTERFACE">
       <b
         style="color: white; margin-bottom: 12px; cursor: grab"
@@ -17,9 +17,9 @@
         draggable="true"
         >DevTools+</b
       >
-      <b style="color: #f2ab26">Box-shadow</b>
+      <b style="color: #f2ab26; cursor: pointer" id="box-shadow">Box-shadow</b>
       <hr width="100%" color="#3090d7" />
-      <legend id="horizontal" class="orange">horizontal</legend>
+      <legend id="horizontal">horizontal</legend>
       <input type="range" id="horizontal" min="-100" max="100" />
       <legend id="vertical">vertical</legend>
       <input type="range" id="vertical" min="-100" max="100" />
@@ -35,7 +35,6 @@
         <legend id="inset">inset</legend>
         <input type="checkbox" id="inset" value="inset" />
       </div>
-      <button id="copy">copy</button>
     </div>
     <!-- ----------------------- END OF BOX SHADOW ------------------------ -->
 
