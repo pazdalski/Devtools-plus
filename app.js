@@ -58,6 +58,10 @@ function setShadow() {
 copyBtn.addEventListener("click", () => {
   const code = `box-shadow: ${values.boxShadow.horizontal}px ${values.boxShadow.vertical}px ${values.boxShadow.blur}px ${values.boxShadow.spread}px ${values.boxShadow.color} ${values.inset};`;
   navigator.clipboard.writeText(code); // Clipboard
+  copyBtn.style.border = "1px solid #2fd4a8";
+  setTimeout(() => {
+    copyBtn.style.border = "";
+  }, 200);
 });
 
 title.addEventListener("drag", (e) => {
@@ -67,8 +71,8 @@ title.addEventListener("drag", (e) => {
     return;
   }
   ui.style = `left: ${e.pageX - dimensions.width / 2}px; top:${e.pageY - 36}px`;
-  ui.classList.add("grabbing");
+  ui.style.opacity = "0.2";
 });
 title.addEventListener("dragend", () => {
-  ui.classList.remove("grabbing");
+  ui.style.opacity = "1";
 });

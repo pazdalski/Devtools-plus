@@ -2,6 +2,15 @@ body {
   /* Not related to the project */
   background-image: url(testwallpaper.jpg);
 }
+#block {
+  position: absolute;
+  top: 32px;
+  left: 400px;
+  background: white;
+  width: 64px;
+  aspect-ratio: 1;
+  box-shadow: var(--ebs);
+}
 
 #INTERFACE {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
@@ -22,12 +31,46 @@ body {
 
   transition: 0.2s border;
 }
+input {
+  outline: 0;
+}
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: e-resize;
+  margin: 10px;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  background-color: #454649;
+  height: 1px;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  margin-top: -5px;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  height: 12px;
+  width: 12px;
+}
+
 .orange {
   color: #e5642e;
 }
 #INTERFACE:hover {
   border: 2px solid #3090d7;
 }
-.grabbing {
-  opacity: 0.2;
+.aside {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+#copy {
+  border: #f2ab26 1px solid;
+  color: white;
+  border-radius: 16px;
+  background: 0;
+  padding: 2px 16px;
+  cursor: pointer;
+  margin-top: 12px;
 }

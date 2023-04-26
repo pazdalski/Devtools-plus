@@ -18,7 +18,7 @@
         >DevTools+</b
       >
       <b style="color: #f2ab26">Box-shadow</b>
-      <hr />
+      <hr width="100%" color="#3090d7" />
       <legend id="horizontal" class="orange">horizontal</legend>
       <input type="range" id="horizontal" min="-100" max="100" />
       <legend id="vertical">vertical</legend>
@@ -27,12 +27,18 @@
       <input type="range" id="blur" min="0" max="100" />
       <legend id="spread">spread</legend>
       <input type="range" id="spread" min="-100" max="100" />
-      <legend id="color">color</legend>
-      <input type="color" id="color" />
-      <legend id="inset">inset</legend>
-      <input type="checkbox" id="inset" value="inset" />
+      <div class="aside">
+        <legend id="color">color</legend>
+        <input type="color" id="color" />
+      </div>
+      <div class="aside">
+        <legend id="inset">inset</legend>
+        <input type="checkbox" id="inset" value="inset" />
+      </div>
       <button id="copy">copy</button>
     </div>
     <!-- ----------------------- END OF BOX SHADOW ------------------------ -->
+
+    <div id="block">a</div>
   </body>
 </html>
