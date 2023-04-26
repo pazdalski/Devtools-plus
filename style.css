@@ -1,5 +1,6 @@
 body {
   background-image: url(testwallpaper.jpg);
+  --type: linear-gradient();
 }
 #block {
   position: absolute;
@@ -9,6 +10,12 @@ body {
   width: 64px;
   aspect-ratio: 1;
   box-shadow: var(--DTBoxShadow);
+  /* background-image: linear-gradient(
+    90deg,
+    rgba(89, 131, 252, 1) 0%,
+    rgba(41, 53, 86, 1) 100%
+  ); */
+  background-image: var(--DTGradient);
 }
 /*! Not related to the project */
 
@@ -32,12 +39,12 @@ body {
   transition: 0.2s border;
   z-index: 999999;
 }
-#box-shadow::after {
+.group::after {
   content: "";
   opacity: 0;
   transition: 0.2s all;
 }
-#box-shadow:hover::after {
+.group:hover::after {
   opacity: 1;
   content: "copy";
   margin-left: 6px;

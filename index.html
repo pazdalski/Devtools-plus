@@ -17,7 +17,9 @@
         draggable="true"
         >DevTools+</b
       >
-      <b style="color: #f2ab26; cursor: pointer" id="box-shadow">Box-shadow</b>
+      <b style="color: #f2ab26; cursor: pointer" id="box-shadow" class="group"
+        >Box-shadow</b
+      >
       <hr width="100%" color="#3090d7" />
       <legend id="horizontal">horizontal</legend>
       <input type="range" id="horizontal" min="-100" max="100" />
@@ -35,8 +37,34 @@
         <legend id="inset">inset</legend>
         <input type="checkbox" id="inset" value="inset" />
       </div>
+      <!-- ----- background-image: linear-gradient(var(--DTGradient)) ---------- -->
+      <b
+        style="color: #f2ab26; cursor: pointer; margin-top: 6px"
+        id="box-shadow"
+        class="group"
+        >Gradient</b
+      >
+      <hr width="100%" color="#3090d7" />
+      <div class="aside">
+        <legend id="radial">radial</legend>
+        <input type="checkbox" id="radial" value="radial" />
+      </div>
+      <legend id="angle">angle</legend>
+      <input type="range" id="angle" min="0" max="360" />
+      <div class="aside">
+        <legend id="color1">color 1</legend>
+        <input type="color" id="color1" value="#5983fc" />
+        <legend id="color1Position"></legend>
+      </div>
+
+      <input type="range" id="color1Position" min="0" max="100" />
+      <div class="aside">
+        <legend id="color2">color 2</legend>
+        <input type="color" id="color2" value="#293556" />
+        <legend id="color2Position"></legend>
+      </div>
+      <input type="range" id="color2Position" min="0" max="100" />
     </div>
-    <!-- ----------------------- END OF BOX SHADOW ------------------------ -->
 
     <div id="block">a</div>
   </body>
