@@ -26,6 +26,10 @@ const values = {
     color2Position: 100,
   },
 };
+// local storage
+ui.style = `left: ${localStorage.getItem("DT+DimensionX") || 50}px; top: ${
+  localStorage.getItem("DT+DimensionY") || 50
+}px`;
 //# --------------------------------- Logic --------------------------------- */
 inputs.forEach((input) => {
   input.addEventListener("input", () => {
@@ -139,6 +143,10 @@ title.addEventListener("drag", (e) => {
   }
   ui.style = `left: ${e.pageX - dimensions.width / 2}px; top:${e.pageY - 36}px`;
   ui.style.opacity = "0.2";
+
+  // local storage
+  localStorage.setItem("DT+DimensionX", e.pageX - dimensions.width / 2);
+  localStorage.setItem("DT+DimensionY", e.pageY - 36);
 });
 title.addEventListener("dragend", () => {
   ui.style.opacity = "1";
