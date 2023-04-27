@@ -4,6 +4,9 @@ const title = document.querySelector("#title");
 const copyBoxShadowBtn = document.querySelector("#box-shadow");
 const copyButtons = document.querySelectorAll(".group");
 
+const finder = document.querySelector("#finder");
+let finderState = { state: "unactive" };
+
 const values = {
   // Default values
   boxShadow: {
@@ -24,7 +27,6 @@ const values = {
   },
 };
 //# --------------------------------- Logic --------------------------------- */
-
 inputs.forEach((input) => {
   input.addEventListener("input", () => {
     const id = input.id;
@@ -112,7 +114,6 @@ function setGradient() {
   }
 }
 //? Copy buttons
-
 copyButtons.forEach((btn) => {
   btn.addEventListener("click", () => {
     let code = ``;
@@ -143,11 +144,7 @@ title.addEventListener("dragend", () => {
   ui.style.opacity = "1";
 });
 
-// Experimental finder functionality
-const finder = document.querySelector("#finder");
-let finderState = { state: "unactive" };
-const history = document.querySelector("#history");
-
+//# Experimental finder functionality
 finder.addEventListener("click", () => {
   finderState.state = "active";
 
@@ -159,12 +156,10 @@ finder.addEventListener("click", () => {
     });
   }
 });
-
 function finderSearch(e) {
   e.target.classList.add("finding");
   document.addEventListener("click", finderClicked);
 }
-
 function finderClicked(e) {
   finderState.state = "unactive";
   const targetClicked = e.target;
