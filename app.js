@@ -146,6 +146,7 @@ title.addEventListener("dragend", () => {
 // Experimental finder functionality
 const finder = document.querySelector("#finder");
 let finderState = { state: "unactive" };
+const history = document.querySelector("#history");
 
 finder.addEventListener("click", () => {
   finderState.state = "active";
@@ -166,13 +167,8 @@ function finderSearch(e) {
 
 function finderClicked(e) {
   finderState.state = "unactive";
-
   const targetClicked = e.target;
-
-  console.log(targetClicked);
-
-  targetClicked.style = `box-shadow: var(--DTBoxShadow); background-image: var(--DTGradient);`; // add box-shadow
-
+  targetClicked.style = `box-shadow: var(--DTBoxShadow); background-image: var(--DTGradient);`; //# Add Styles
   document.removeEventListener("mouseover", finderSearch);
   document.removeEventListener("click", finderClicked);
 }
