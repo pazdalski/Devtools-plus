@@ -9,14 +9,17 @@
     <script src="app.js" defer></script>
   </head>
   <body>
-    <!-- ----------------------- box-shadow: var(--DTBoxShadow) ------------------------ -->
+    <!-- ----------------------- box-shadow: var(--DTBoxShadow) -------------------- -->
+    <!-- --------------------- background-image: var(--DTGradient) ----------------- -->
     <div id="INTERFACE">
+      <b style="cursor: pointer" id="finder">Finder</b>
       <b
         style="color: white; margin-bottom: 12px; cursor: grab"
         id="title"
         draggable="true"
         >DevTools+</b
       >
+      <!-- Box shadow -->
       <b style="color: #f2ab26; cursor: pointer" id="box-shadow" class="group"
         >Box-shadow</b
       >
@@ -37,7 +40,7 @@
         <legend id="inset">inset</legend>
         <input type="checkbox" id="inset" value="inset" />
       </div>
-      <!-- ----- background-image: linear-gradient(var(--DTGradient)) ---------- -->
+      <!-- Gradient -->
       <b
         style="color: #f2ab26; cursor: pointer; margin-top: 6px"
         id="box-shadow"
@@ -53,19 +56,20 @@
       <input type="range" id="angle" min="0" max="360" />
       <div class="aside">
         <legend id="color1">color 1</legend>
-        <input type="color" id="color1" value="#5983fc" />
+        <input type="color" id="color1" value="#ffffff" />
         <legend id="color1Position"></legend>
       </div>
 
       <input type="range" id="color1Position" min="0" max="100" />
       <div class="aside">
         <legend id="color2">color 2</legend>
-        <input type="color" id="color2" value="#293556" />
+        <input type="color" id="color2" value="#ffffff" />
         <legend id="color2Position"></legend>
       </div>
       <input type="range" id="color2Position" min="0" max="100" />
     </div>
 
-    <div id="block">a</div>
+    <div id="block"></div>
+    <div id="block2"></div>
   </body>
 </html>

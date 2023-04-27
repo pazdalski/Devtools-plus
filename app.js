@@ -11,15 +11,15 @@ const values = {
     vertical: 0,
     blur: 24,
     spread: 0,
-    color: `#00000050`,
+    color: `#00000000`,
     inset: ``,
   },
   gradient: {
     type: "linear",
     angle: 90,
-    color1: `rgba(89, 131, 252, 1)`,
+    color1: ``,
     color1Position: 0,
-    color2: `rgba(41, 53, 86, 1)`,
+    color2: ``,
     color2Position: 100,
   },
 };
@@ -142,3 +142,37 @@ title.addEventListener("drag", (e) => {
 title.addEventListener("dragend", () => {
   ui.style.opacity = "1";
 });
+
+// Experimental finder functionality
+const finder = document.querySelector("#finder");
+let finderState = { state: "unactive" };
+
+finder.addEventListener("click", () => {
+  finderState.state = "active";
+
+  if (finderState.state == "active") {
+    document.addEventListener("mouseover", finderSearch);
+
+    document.addEventListener("mouseout", (e) => {
+      e.target.classList.remove("finding");
+    });
+  }
+});
+
+function finderSearch(e) {
+  e.target.classList.add("finding");
+  document.addEventListener("click", finderClicked);
+}
+
+function finderClicked(e) {
+  finderState.state = "unactive";
+
+  const targetClicked = e.target;
+
+  console.log(targetClicked);
+
+  targetClicked.style = `box-shadow: var(--DTBoxShadow); background-image: var(--DTGradient);`; // add box-shadow
+
+  document.removeEventListener("mouseover", finderSearch);
+  document.removeEventListener("click", finderClicked);
+}
