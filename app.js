@@ -63,6 +63,7 @@ inputs.forEach((input) => {
           values.boxShadow.inset = "inset";
         }
         break;
+      // End of box-shadow
       // Gradient
       case "radial":
         if (values.gradient.type == "radial") {
